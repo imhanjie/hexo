@@ -237,4 +237,11 @@ public boolean onTransact(int code, android.os.Parcel data, android.os.Parcel re
 ![](http://i.imgur.com/fAB1cPe.png)
 
 
+---
+
+**还需要注意：**
+
+另外还需注意，客户端远程调用服务端的方法时，若服务端内发生异常，这里指的是除RemoteException以外的异常，不论发什么异常，**服务端是不会停止的**，但是部分异常能传递到客户端，例如NullPointerException空指针异常，有些异常不能传递到客户端，例如RuntimeException
+。**若能传递到客户端，客户端就会崩溃停止运行，不能传递到客户端，客户端则无影响。**
+
 
