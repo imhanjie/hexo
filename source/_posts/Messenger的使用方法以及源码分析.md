@@ -319,7 +319,7 @@ public void send(Message message) throws RemoteException {
 
 ---
 
-### 总结：
+### 总结
 - Messenger是一种轻量级的IPC机制
 - Messenger的主要作用是**跨进程传递消息**
 - Messenger内部是通过AIDL实现的
